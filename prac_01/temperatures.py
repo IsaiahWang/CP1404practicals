@@ -1,6 +1,6 @@
 """
 CP1404 practicals - Practical 1
-Temperature converison program
+Temperature conversion program
 """
 
 MENU = """C - Convert Celsius to Fahrenheit

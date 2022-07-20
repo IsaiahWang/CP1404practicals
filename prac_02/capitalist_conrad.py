@@ -12,18 +12,19 @@ OUTPUT_FILE = 'stock_price.txt'
 
 
 def determine_trend():
+    """determine trend of the stock"""
     if random.randint(1, 2) == 1:
         return True  # price increase
     return False  # price decrease
 
 
-# determine price increase ratio
 def determine_increase_ratio():
+    """determine price increase ratio"""
     return random.uniform(0, MAX_INCREASE)
 
 
-# determine price decrease ratio
 def determine_decrease_ratio():
+    """determine price decrease ratio"""
     return random.uniform(-MAX_DECREASE, 0)
 
 
