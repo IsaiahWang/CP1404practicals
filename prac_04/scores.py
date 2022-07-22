@@ -17,11 +17,14 @@ def main():
     print(scores_data)
     subjects = scores_data[0].strip().split(",")
     score_values = []
-    for score_line in scores_data[1:]:
-        score_strings = score_line.strip().split(",")
-        score_numbers = [int(value) for value in score_strings]
-        score_values.append(score_numbers)
+    for i in range(len(subjects)):
+        scores_per_subject = []
+        for score_line in scores_data[1:]:
+            scores = score_line.strip().split(',')
+            scores_per_subject.append(scores[i])
+        score_values.append(scores_per_subject)
     scores_file.close()
+    print(score_values)
     for i in range(len(subjects)):
         print(subjects[i], "Scores:")
         for score in score_values[i]:
