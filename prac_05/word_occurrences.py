@@ -11,7 +11,7 @@ def main():
         else:
             word_dict.update({word: 1})
     word_dict_sorted = sorted(word_dict.items())
-    max_length = max([len(word) for word in word_dict.keys()])
+    max_length = max((len(word) for word in word_dict.keys()))
     for item in word_dict_sorted:
         print(f'{item[0]:{max_length}} : {item[1]}')
     # method 2
