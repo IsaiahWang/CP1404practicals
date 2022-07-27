@@ -6,17 +6,16 @@ import random
 
 
 def main():
-    """Main function"""
+    """Start of program."""
     score = float(input("Enter score: "))
-    result = determine_result(score)
-    print(result)
+    print(determine_result(score))
     random_score = random.randint(0, 100)
     random_result = determine_result(random_score)
     print(f'Random score is {random_score} and random result is {random_result}')
 
 
 def determine_result(score):
-    """determine result based on score"""
+    """Determine result based on score."""
     if score > 100 or score < 0:
         return "Invalid score"
     elif score >= 90:
