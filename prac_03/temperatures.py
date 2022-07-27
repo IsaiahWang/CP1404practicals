@@ -9,17 +9,17 @@ Q - Quit"""
 
 
 def convert_celsius_to_fahrenheit(celsius):
-    """convert celsius to fahrenheit"""
+    """Convert celsius to fahrenheit."""
     return celsius * 9.0 / 5 + 32
 
 
 def convert_fahrenheit_to_celsius(fahrenheit):
-    """convert fahrenheit to celsius"""
+    """Convert fahrenheit to celsius."""
     return 5 / 9 * (fahrenheit - 32)
 
 
 def main():
-    """Main function"""
+    """Start of program."""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
