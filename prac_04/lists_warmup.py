@@ -1,4 +1,11 @@
+"""
+CP1404 practicals - Practical 4
+Lists "warm-up"
+"""
+
+
 def main():
+    """Start of program."""
     numbers = [3, 1, 4, 1, 5, 9, 2]  # 3
     print(numbers[0])  # 3
     print(numbers[-1])  # 2

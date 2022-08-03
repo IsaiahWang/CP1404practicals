@@ -1,14 +1,14 @@
 """
-CP1404/CP5632 Practical
+CP1404 practicals - Practical 4
 Cumulative total income program
 """
 
 
 def main():
-    """main function"""
+    """Start of program."""
     incomes = []
-    month_number = int(input("How many months? "))
-    for month in range(1, month_number + 1):
+    number_of_months = int(input("How many months? "))
+    for month in range(1, number_of_months + 1):
         income = float(
             input("Enter income for month {}: ".format(month)))
         incomes.append(income)
@@ -16,7 +16,7 @@ def main():
 
 
 def print_income_report(incomes):
-    """Print income report based on monthly income"""
+    """Print income report based on monthly income."""
     print("\nIncome Report\n-------------")
     total = 0
     for index, income in enumerate(incomes):

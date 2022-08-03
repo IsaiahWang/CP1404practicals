@@ -1,3 +1,8 @@
+"""
+CP1404 practicals - Practical 4
+Quick pick program
+"""
+
 import random
 
 LINE_NUMBER = 6
@@ -6,17 +11,19 @@ MAX_NUMBER = 45
 
 
 def main():
-    pick_number = int(input('How many quick picks? '))
-    for i in range(pick_number):
+    """Start of program."""
+    number_of_quick_picks = int(input("How many quick picks? "))
+    while number_of_quick_picks < 0:
+        print("That makes no sense!")
+        number_of_quick_picks = int(input("How many quick picks? "))
+    for i in range(number_of_quick_picks):
         numbers = []
         while len(numbers) < 6:
             number = random.randint(MIN_NUMBER, MAX_NUMBER)
-            if not number in numbers:
+            if number not in numbers:
                 numbers.append(number)
         numbers.sort()
-        for number in numbers:
-            print('{:2}'.format(number), end=' ')
-        print()
+        print(" ".join("{:2}".format(number) for number in numbers))
 
 
 main()
